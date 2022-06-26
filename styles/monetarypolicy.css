@@ -1,0 +1,104 @@
+body {
+    background-color: #1c1c1c;
+}
+
+.monetary {
+    background-image: url("/img/o\ \(1\).png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10rem 0;
+}
+
+.monetary .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.monetary h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+
+.monetary p {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: #E0E0E0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    background-color: #161515;
+    border: 1px solid #F7AD6D;
+    border-radius: 18px;
+    padding: 30px 30px 30px 28px;
+}
+
+.cards h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card p {
+    text-align: inherit !important;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1%;
+}
+
+.card h3 {
+    color: #F59848;
+    font-size: 17px;
+    font-weight: 300;   
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.arrow {
+    margin-left: .2rem;
+    cursor: pointer;
+}
+
+.monetary h2 {
+    color: #F7AD6D;
+    font-size: 26px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+   .cards {
+    grid-template-columns: 1fr;
+   }
+}
+
+@media (max-width: 500px) {
+    .monetary {
+        padding: 5rem 0;
+    }
+
+    .monetary h1 {
+        font-size: 25px;
+    }
+
+    .monetary h2 {
+        font-size: 20px;
+    }
+
+    .monetary .flex {
+        gap: 35px
+    }
+}

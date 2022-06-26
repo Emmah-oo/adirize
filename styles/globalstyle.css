@@ -16,11 +16,34 @@ body {
     margin: 0 auto;
 }
 
+.scrolled {
+    background-color: #131a23;
+}
+  
+.scrolled li a {
+    color: #fff;
+}
+
+.hide-1 {
+    display: none;
+}
+
+.logo-hide {
+    display: none;
+}
+
 nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     height: 12vh;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    transition: background-color 300ms linear;
 }
 
 .nav-links {
@@ -42,7 +65,7 @@ nav {
 }
 
 .divider {
-    margin-right: .3rem;
+    margin-right: .5rem;
 }
 
 nav .btn {
@@ -51,6 +74,19 @@ nav .btn {
     border-radius: 32px;
     background: #F59848;
     color: #fff;
+    cursor: pointer;
+}
+
+.burger {
+    cursor: pointer;
+    display: none;
+}
+  
+.line {
+    height: 3px;
+    width: 25px;
+    background: #AE6C33;
+    margin: 0.3rem 0;
 }
 
 footer {
@@ -113,3 +149,74 @@ footer .container-grid {
     gap: 20px;
     place-items: center;
 }
+
+@media (max-width: 1150px) {
+    .row-1 {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .row-2 {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        place-items: baseline;
+    }
+
+    .row-2 img {
+        order: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-links {
+        position: fixed;
+        height: 100%;
+        background-color: #131a23;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translateX(100%);
+        transition: 300ms linear;
+    }
+
+    .nav-links li {
+        margin: 1rem;
+    }
+
+    .active {
+        transform: translateX(0);
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .hide-1 {
+        display: block;
+    }
+
+    .burger {
+        display: block;
+        position: fixed;
+        right: 5%;
+        z-index: 1;
+    }
+
+    .logo-hide {
+        display: block;
+        width: 50%;
+    }
+
+    .divider {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .row-2 img {
+        width: 70%;
+    }
+} 

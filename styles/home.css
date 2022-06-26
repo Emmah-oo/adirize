@@ -3,7 +3,11 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    /* height: 100vh; */
+}
+
+.showcase {
+    padding: 10rem 0;
 }
 
 .showcase .logo {
@@ -60,6 +64,7 @@ header {
     border: 0;
     padding: 10px 24px;
     color: #fff;
+    cursor: pointer;
 }
 
 .cta-btn .btn img {
@@ -104,6 +109,7 @@ section {
     font-weight: 700;
     font-size: 40px;
     color: #fff;
+    text-align: center;
 }
 
 .countdown-timer p {
@@ -132,6 +138,7 @@ section {
     font-size: 18px;
     font-weight: 400;
     color: #fff;
+    text-align: center;
 }
 
 .token {
@@ -180,7 +187,7 @@ section {
     font-size: 20px;
     line-height: 32px;
     color: #F7AD6D;
-    margin-top: -30vh;
+    margin-top: -23vh;
 }
 
 
@@ -240,18 +247,14 @@ section {
 }
 
 .stable-coin .flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 40px;
 }
 
 .stable-img {
-    width: 50%;
-}
-
-.stable-text {
-    width: 50%;
+    width: 100%;
 }
 
 .stable-text h1 {
@@ -283,6 +286,10 @@ section {
     place-items: center;
 }
 
+.work-img {
+    width: 100%;
+}
+
 .work-text h1 {
     font-weight: 700;
     font-size: 40px;
@@ -296,4 +303,78 @@ section {
     line-height: 27px;
     color: #fff;
     margin: 1.5rem 0;
+}
+
+@media (max-width: 1000px) {
+    .cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 900px) {
+    .showcase .grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .cta {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 850px) {
+    .governance .grid, .token .grid, .work .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stable-coin .flex {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .img {
+        width: 60%;
+    }
+
+    .stable-img {
+        order: -1;
+    }
+} 
+
+@media (max-width: 500px) {
+    .showcase {
+        padding: 5rem 0;
+    }
+
+    .showcase h1 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .showcase p {
+        font-size: 13px;
+    }
+
+    .cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta-text h2 {
+        font-size: 13px;
+    }
+
+    .countdown-container h1 {
+        font-size: 20px;
+    }
+
+    .countdown-container h2 {
+        font-size: 25px;
+    }
+
+    .token-text h1, .governance-text h1, .stable-text h1, .work-text h1 {
+        font-size: 25px;
+    }
 }

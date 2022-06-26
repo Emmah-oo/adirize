@@ -1,0 +1,142 @@
+body {
+    background-color: #1c1c1c;
+}
+
+.faq {
+    padding: 10rem 0;
+    background-image: url("/img/faq-bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.faq .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.tabs li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tabs h1 {
+    color: #875428;
+    margin-left: auto;
+}
+
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+display: block;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #AE6C33;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    gap: 20px;
+    margin-right: -5rem;
+    z-index: 1;
+    height: 400px;
+    padding: 1rem 0;
+}
+
+.tab {
+cursor: pointer;
+padding: 10px;
+}
+
+.tab.active {
+    background: #F7AD6D;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.tab:hover {
+    background: #F7AD6D;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.circle.active {
+    background: #b4aea8;
+    box-shadow: 0px 8px 12px rgba(135, 84, 40, 0.3);
+}
+
+.tab-content {
+    border: 1px solid #F7AD6D;
+    text-align: right;
+    padding: 1rem 2rem 1rem 1rem;
+    background: #1F1F1F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(200px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 18px;
+    height: 500px;
+    
+}
+
+.tab-content h1 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #fff;
+}
+
+.tab-content p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.circle {
+height: 25px;
+width: 25px;
+border-radius: 50%;
+background: #F7AD6D;
+box-shadow: 0px 8px 12px rgba(135, 84, 40, 0.5);
+}
+
+@media (max-width: 750px) {
+    .faq .grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .tabs {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .tab-content {
+        text-align: center;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .faq {
+        padding: 5rem 0;
+    }
+
+    .tabs li {
+        font-size: 13px;
+    }
+
+    .tab-content h1 {
+        font-size: 14px;
+    }
+
+    .tab-content p {
+        font-size: 12px;
+    }
+}
