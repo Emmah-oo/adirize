@@ -57,8 +57,9 @@ padding: 10px;
 }
 
 .tab.active {
-    background: #F7AD6D;
+    background: #F7AD6D !important;
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.15);
+    color: #fff;
 }
 
 .tab:hover {

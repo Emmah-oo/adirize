@@ -8,6 +8,8 @@ header {
 
 .showcase {
     padding: 10rem 0;
+    background-image: url("/img/showcase-blur.png");
+    background-size: cover;
 }
 
 .showcase .logo {
@@ -25,8 +27,8 @@ header {
 
 .showcase-img {
     width: 100%;
-    background-image: url("/img/showcase-blur.png");
-    background-size: cover;
+    /* background-image: url("/img/showcase-blur.png"); */
+    /* background-size: cover; */
 }
 
 .showcase-img img {
@@ -348,6 +350,11 @@ section {
         padding: 5rem 0;
     }
 
+    .showcase-img {
+        border-radius: 50%;
+        background-image: url(/img/showcase-blur.png);
+    }
+
     .showcase h1 {
         font-size: 20px;
         line-height: 30px;
@@ -376,5 +383,9 @@ section {
 
     .token-text h1, .governance-text h1, .stable-text h1, .work-text h1 {
         font-size: 25px;
+    }
+
+    .token-img h1 {
+        margin-top: -16vh;
     }
 }

@@ -17,7 +17,7 @@ body {
 }
 
 .scrolled {
-    background-color: #131a23;
+    background-color: #1C1C1C;
 }
   
 .scrolled li a {
@@ -92,6 +92,7 @@ nav .btn {
 footer {
     background: #1C1C1C;
     padding-top: 4rem;
+    /* margin-top: 18rem; */
 }
 
 footer .container-grid {
@@ -168,6 +169,10 @@ footer .container-grid {
 }
 
 @media (max-width: 900px) {
+    nav {
+        height: 8vh;
+    }
+
     .nav-links {
         position: fixed;
         height: 100%;
