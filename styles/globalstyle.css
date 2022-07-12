@@ -137,6 +137,17 @@ footer .container-grid {
     place-items: center;
 }
 
+.row-2 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.row-2 img {
+    width: 50%;
+}
+
 .row-2 p {
     font-size: 14px;
     color: #fff;
